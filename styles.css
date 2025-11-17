@@ -1,0 +1,1028 @@
+/* ==================== GLOBAL STYLES ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2a2a2a;
+}
+
+p {
+    margin-bottom: 1.2rem;
+}
+
+.lead {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #444;
+    line-height: 1.5;
+}
+
+strong {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+section {
+    padding: 80px 0;
+}
+
+/* ==================== BUTTONS ==================== */
+.btn {
+    display: inline-block;
+    padding: 18px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+.btn-secondary {
+    background: #f3f4f6;
+    color: #1f2937;
+    border: 2px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+    background: #e5e7eb;
+    border-color: #9ca3af;
+}
+
+.btn-large {
+    padding: 22px 50px;
+    font-size: 1.2rem;
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 100px 0 80px;
+}
+
+.hero h1 {
+    color: white;
+    margin-bottom: 1.5rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero h2 {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-primary {
+    margin: 40px 0;
+}
+
+.cta-subtext {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    margin-top: 15px;
+}
+
+.trust-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 60px 0 40px;
+    flex-wrap: wrap;
+}
+
+.trust-item {
+    text-align: center;
+}
+
+.trust-item strong {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.trust-item span {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.hero-media {
+    margin-top: 50px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    color: rgba(255, 255, 255, 0.9);
+    font-style: italic;
+}
+
+/* ==================== PROBLEM SECTION ==================== */
+.problem {
+    background: #fef2f2;
+}
+
+.problem h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.problem .lead {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.pain-points {
+    display: grid;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.pain-point {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid #dc2626;
+}
+
+.pain-point h3 {
+    color: #dc2626;
+    margin-bottom: 0.8rem;
+}
+
+.problem-summary {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==================== SOLUTION SECTION ==================== */
+.solution {
+    background: white;
+}
+
+.solution h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.solution .lead {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #2563eb;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.solution > .container > p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+}
+
+.solution-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 50px 0;
+}
+
+.old-way, .new-way {
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.old-way {
+    background: #fef2f2;
+    border: 2px solid #fecaca;
+}
+
+.old-way h3 {
+    color: #dc2626;
+}
+
+.new-way {
+    background: #ecfdf5;
+    border: 2px solid #a7f3d0;
+}
+
+.new-way h3 {
+    color: #059669;
+}
+
+.solution-comparison ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.solution-comparison li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+}
+
+.old-way li:before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.new-way li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #059669;
+    font-weight: bold;
+}
+
+.solution-promise {
+    background: #f0f9ff;
+    padding: 40px;
+    border-radius: 12px;
+    margin: 50px 0;
+    border-left: 4px solid #2563eb;
+}
+
+.solution-media {
+    margin-top: 50px;
+    padding: 40px;
+    background: #f9fafb;
+    border-radius: 12px;
+    text-align: center;
+    color: #6b7280;
+    font-style: italic;
+}
+
+/* ==================== SOCIAL PROOF SECTION ==================== */
+.social-proof {
+    background: #f9fafb;
+}
+
+.social-proof h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.instructor-story {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    margin-bottom: 50px;
+    align-items: start;
+}
+
+.story-image {
+    background: #e5e7eb;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    color: #6b7280;
+    font-style: italic;
+}
+
+.highlight {
+    background: #fef3c7;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    margin: 20px 0;
+}
+
+.proof-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 60px 0;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat strong {
+    display: block;
+    font-size: 2.5rem;
+    color: #2563eb;
+    margin-bottom: 5px;
+}
+
+.stat span {
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+.testimonials h3 {
+    text-align: center;
+    margin: 60px 0 30px;
+}
+
+.testimonial-placeholder {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    margin: 20px 0;
+    border: 2px dashed #d1d5db;
+    color: #6b7280;
+    text-align: center;
+    font-style: italic;
+}
+
+/* ==================== WHAT'S INCLUDED SECTION ==================== */
+.whats-included {
+    background: white;
+}
+
+.whats-included h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.whats-included .lead {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.included-items {
+    display: grid;
+    gap: 25px;
+    margin: 50px 0;
+}
+
+.included-item {
+    background: #f9fafb;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid #2563eb;
+}
+
+.included-item h3 {
+    color: #2563eb;
+    margin-bottom: 0.8rem;
+}
+
+.value-stack {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 50px;
+    border-radius: 12px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.value-intro {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.value-stack ul {
+    list-style: none;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+
+.value-stack li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.value-total {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+}
+
+.value-actual {
+    font-size: 2.5rem;
+    color: #fef3c7;
+}
+
+/* ==================== CURRICULUM SECTION ==================== */
+.curriculum {
+    background: #f9fafb;
+}
+
+.curriculum h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.curriculum .lead {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.modules {
+    margin: 50px 0;
+}
+
+.module {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border-left: 4px solid #2563eb;
+}
+
+.module-number {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.module h3 {
+    margin-bottom: 1rem;
+}
+
+.module ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.module li {
+    margin: 8px 0;
+    color: #4b5563;
+}
+
+.timeline {
+    background: #ecfdf5;
+    padding: 40px;
+    border-radius: 12px;
+    margin-top: 50px;
+}
+
+.timeline h3 {
+    color: #059669;
+    margin-bottom: 1.5rem;
+}
+
+.timeline ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.timeline li {
+    padding: 12px 0 12px 30px;
+    position: relative;
+}
+
+.timeline li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #059669;
+    font-weight: bold;
+}
+
+/* ==================== WHO FOR / NOT FOR SECTIONS ==================== */
+.who-for {
+    background: white;
+}
+
+.who-for h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.ideal-student ul {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 0;
+}
+
+.ideal-student li {
+    padding: 15px 0 15px 35px;
+    position: relative;
+    margin: 10px 0;
+}
+
+.ideal-student li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #059669;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.success-profile {
+    max-width: 800px;
+    margin: 50px auto 0;
+    background: #f0f9ff;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.success-profile h3 {
+    color: #2563eb;
+    margin-bottom: 1.5rem;
+}
+
+.who-not-for {
+    background: #fef2f2;
+}
+
+.who-not-for h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.wrong-fit ul {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 0;
+}
+
+.wrong-fit li {
+    padding: 15px 0 15px 35px;
+    position: relative;
+    margin: 10px 0;
+}
+
+.wrong-fit li:before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    color: #dc2626;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.honesty-statement {
+    max-width: 800px;
+    margin: 40px auto 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #dc2626;
+}
+
+/* ==================== INSTRUCTOR SECTION ==================== */
+.instructor {
+    background: white;
+}
+
+.instructor h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.instructor-bio {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.bio-image {
+    background: #e5e7eb;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    color: #6b7280;
+    font-style: italic;
+    height: fit-content;
+}
+
+.bio-content h3 {
+    margin-top: 2rem;
+    color: #2563eb;
+}
+
+.instructor-apps {
+    margin-top: 60px;
+}
+
+.instructor-apps h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.app-showcase {
+    background: #f9fafb;
+    padding: 60px;
+    border-radius: 12px;
+    text-align: center;
+    color: #6b7280;
+    font-style: italic;
+}
+
+/* ==================== PRICING SECTION ==================== */
+.pricing {
+    background: #f9fafb;
+}
+
+.pricing h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.pricing .lead {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.pricing-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.pricing-option {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    border: 2px solid #e5e7eb;
+    position: relative;
+}
+
+.pricing-option.featured {
+    border: 3px solid #2563eb;
+    box-shadow: 0 10px 40px rgba(37, 99, 235, 0.2);
+}
+
+.price-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2563eb;
+    color: white;
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.pricing-option h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.price {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.price .amount {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+.price .period {
+    display: block;
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin-top: 5px;
+}
+
+.price-features {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.price-features li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+}
+
+.price-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #059669;
+    font-weight: bold;
+}
+
+.pricing-option .btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.payment-note {
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.what-happens-next {
+    max-width: 800px;
+    margin: 60px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.what-happens-next h3 {
+    color: #2563eb;
+    margin-bottom: 1.5rem;
+}
+
+.what-happens-next ol {
+    padding-left: 20px;
+}
+
+.what-happens-next li {
+    margin: 15px 0;
+    padding-left: 10px;
+}
+
+.urgency {
+    max-width: 800px;
+    margin: 60px auto;
+    background: #fef3c7;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.urgency h3 {
+    color: #d97706;
+    margin-bottom: 1rem;
+}
+
+/* ==================== GUARANTEE SECTION ==================== */
+.guarantee {
+    background: #ecfdf5;
+}
+
+.guarantee h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.guarantee-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.guarantee-icon {
+    background: white;
+    padding: 60px 40px;
+    border-radius: 12px;
+    text-align: center;
+    color: #6b7280;
+    font-style: italic;
+}
+
+/* ==================== FAQ SECTION ==================== */
+.faq {
+    background: white;
+}
+
+.faq h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #f9fafb;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #2563eb;
+}
+
+.faq-item h3 {
+    color: #2563eb;
+    margin-bottom: 1rem;
+}
+
+/* ==================== FINAL CTA SECTION ==================== */
+.final-cta {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+}
+
+.final-cta h2 {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.final-cta .lead {
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.final-cta p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.final-cta-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.cta-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.cta-box h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.cta-box p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+}
+
+.urgency-final {
+    font-size: 1.3rem;
+    margin: 2rem auto;
+    color: #fef3c7;
+}
+
+.timeline-final, .decision-final {
+    font-size: 1.1rem;
+    margin: 1.5rem auto;
+}
+
+.cta-buttons {
+    margin: 50px 0 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.guarantee-reminder {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+}
+
+.final-instructor-note {
+    margin-top: 60px;
+    font-size: 1.1rem;
+}
+
+.final-instructor-note p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    background: #1f2937;
+    color: #9ca3af;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #9ca3af;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    .solution-comparison,
+    .pricing-options,
+    .instructor-story,
+    .instructor-bio,
+    .guarantee-content {
+        grid-template-columns: 1fr;
+    }
+
+    .final-cta-boxes {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-indicators,
+    .proof-stats {
+        gap: 30px;
+    }
+
+    .btn-large {
+        padding: 18px 30px;
+        font-size: 1.1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+    }
+}
