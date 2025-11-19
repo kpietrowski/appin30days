@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Guide: Build Your First iOS App with AI | App in 30 Days</title>
+    <meta name="description" content="Get the free guide that shows you how to use Claude Code to build real iOS apps. No coding experience required.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Page-specific styles */
+        .guide-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 90px 0 70px;
+        }
+
+        .guide-container {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .benefits-box {
+            background: linear-gradient(135deg, rgba(127, 176, 105, 0.08) 0%, rgba(127, 176, 105, 0.04) 100%);
+            padding: 38px;
+            border-radius: 28px;
+            margin: 40px 0;
+            border: 1px solid rgba(127, 176, 105, 0.2);
+        }
+
+        .benefits-box h3 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .benefits-list li {
+            padding: 12px 0 12px 36px;
+            position: relative;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        .testimonial-box {
+            background: white;
+            padding: 32px;
+            border-radius: 28px;
+            margin: 40px 0;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            font-style: italic;
+        }
+
+        .testimonial-box p {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .testimonial-author {
+            font-size: 0.95rem;
+            color: var(--soft-gray);
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .form-container {
+            background: white;
+            padding: 44px;
+            border-radius: 32px;
+            margin: 40px 0;
+            box-shadow: 0 20px 70px rgba(255, 128, 102, 0.2);
+            border: 3px solid var(--primary);
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark);
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"] {
+            width: 100%;
+            padding: 18px 24px;
+            font-size: 1.05rem;
+            font-family: 'Manrope', sans-serif;
+            border: 2px solid rgba(140, 136, 132, 0.15);
+            border-radius: 16px;
+            background: var(--warm-white);
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 4px 16px rgba(255, 128, 102, 0.15);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin: 24px 0;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 22px;
+            height: 22px;
+            margin-top: 2px;
+            cursor: pointer;
+            accent-color: var(--primary);
+        }
+
+        .checkbox-group label {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            cursor: pointer;
+            color: var(--dark-soft);
+        }
+
+        .trust-signal {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--soft-gray);
+            margin-top: 20px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 22px 36px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            font-family: 'DM Sans', sans-serif;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 10px 30px rgba(255, 128, 102, 0.25);
+        }
+
+        .submit-btn:hover:not(:disabled) {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(255, 128, 102, 0.35);
+        }
+
+        .submit-btn:active:not(:disabled) {
+            transform: scale(0.98) translateY(1px);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        @media (min-width: 769px) {
+            .guide-container {
+                max-width: 700px;
+            }
+
+            .form-container {
+                padding: 52px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="guide-hero hero">
+    <div class="container guide-container">
+        <h1>Build Your First iOS App with AI (No Coding Required)</h1>
+
+        <p class="lead">Get the free guide that shows you how to use Claude Code to build real apps</p>
+
+        <div class="benefits-box">
+            <h3>Inside This Free Guide:</h3>
+            <ul class="benefits-list">
+                <li>How to install & configure Claude Code (step-by-step)</li>
+                <li>The exact prompts to start building your first app</li>
+                <li>Build a working counter app in under 2 hours</li>
+                <li>See your code running on your actual iPhone</li>
+                <li>Understanding Claude Code basics (without getting overwhelmed)</li>
+            </ul>
+        </div>
+
+        <div class="testimonial-box">
+            <p>"I had zero coding experience. This guide got me building in the same day. Seeing my first app on my phone was unreal."</p>
+            <p class="testimonial-author">— Sarah M.</p>
+        </div>
+
+        <div class="form-container">
+            <form id="guideForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="What should we call you?"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Where should we send the guide?"
+                        required
+                    >
+                </div>
+
+                <div class="checkbox-group">
+                    <input
+                        type="checkbox"
+                        id="optedIn"
+                        name="optedIn"
+                        checked
+                    >
+                    <label for="optedIn">Yes! Send me tips on building apps with AI (you can unsubscribe anytime)</label>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    Send Me The Free Guide
+                </button>
+
+                <p class="trust-signal">🔒 Your email is safe. No spam, ever. Unsubscribe with one click.</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+document.getElementById('guideForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const submitBtn = document.getElementById('submitBtn');
+    const originalText = submitBtn.textContent;
+
+    // Get form data
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        optedIn: document.getElementById('optedIn').checked
+    };
+
+    // Disable button and show loading state
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    try {
+        const response = await fetch('/api/subscribe-guide', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+            // Success - redirect to launch page
+            window.location.href = '/launch.html';
+        } else {
+            // Error - show message and reset button
+            alert(result.error || 'Something went wrong. Please try again.');
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Something went wrong. Please try again.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+    }
+});
+</script>
+
+</body>
+</html>

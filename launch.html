@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launch Your App in 6 Weeks | App in 30 Days December Cohort</title>
+    <meta name="description" content="Join the December cohort and launch your iOS app with guidance from someone who's done it. No coding experience required.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Sticky banner */
+        .email-banner {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            color: white;
+            padding: 16px 24px;
+            text-align: center;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .email-banner-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        /* Content boxes */
+        .warning-box {
+            background: linear-gradient(135deg, rgba(255, 128, 102, 0.12) 0%, rgba(255, 128, 102, 0.06) 100%);
+            padding: 38px;
+            border-radius: 28px;
+            margin: 40px 0;
+            border: 2px solid rgba(255, 128, 102, 0.25);
+        }
+
+        .warning-box h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1.2rem;
+        }
+
+        .solution-box {
+            background: linear-gradient(135deg, rgba(127, 176, 105, 0.12) 0%, rgba(127, 176, 105, 0.06) 100%);
+            padding: 38px;
+            border-radius: 28px;
+            margin: 40px 0;
+            border: 2px solid rgba(127, 176, 105, 0.25);
+        }
+
+        .solution-box h3 {
+            color: var(--accent);
+            margin-bottom: 1.2rem;
+        }
+
+        .content-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .content-list li {
+            padding: 10px 0 10px 32px;
+            position: relative;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .content-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--dark-soft);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .included-box {
+            background: white;
+            padding: 44px;
+            border-radius: 32px;
+            margin: 50px 0;
+            box-shadow: 0 20px 70px rgba(127, 176, 105, 0.2);
+            border: 3px solid var(--accent);
+        }
+
+        .included-box h3 {
+            color: var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        .included-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .included-list li {
+            padding: 16px 0 16px 36px;
+            position: relative;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .included-list li:last-child {
+            border-bottom: none;
+        }
+
+        .included-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        .included-list strong {
+            color: var(--accent);
+        }
+
+        .testimonial-large {
+            background: linear-gradient(135deg, rgba(255, 128, 102, 0.08) 0%, rgba(255, 128, 102, 0.04) 100%);
+            padding: 44px;
+            border-radius: 28px;
+            margin: 50px 0;
+            border: 1px solid rgba(255, 128, 102, 0.2);
+            font-size: 1.15rem;
+            font-style: italic;
+        }
+
+        .testimonial-large p:last-child {
+            font-style: normal;
+            font-size: 0.95rem;
+            color: var(--soft-gray);
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .price-box {
+            background: white;
+            padding: 52px;
+            border-radius: 32px;
+            margin: 60px 0;
+            text-align: center;
+            box-shadow: 0 20px 80px rgba(255, 128, 102, 0.25);
+            border: 4px solid var(--primary);
+        }
+
+        .price-strikethrough {
+            font-size: 1.2rem;
+            color: var(--soft-gray);
+            text-decoration: line-through;
+            margin-bottom: 16px;
+        }
+
+        .price-large {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--primary);
+            font-family: 'DM Sans', sans-serif;
+            margin: 20px 0;
+        }
+
+        .price-payment-plan {
+            font-size: 1.1rem;
+            color: var(--dark-soft);
+            margin: 16px 0 32px;
+        }
+
+        .price-details {
+            font-size: 0.95rem;
+            color: var(--soft-gray);
+            margin-top: 20px;
+        }
+
+        .scarcity-box {
+            background: linear-gradient(135deg, rgba(255, 128, 102, 0.15) 0%, rgba(255, 128, 102, 0.08) 100%);
+            padding: 32px;
+            border-radius: 28px;
+            margin: 40px 0;
+            text-align: center;
+            border: 2px solid var(--primary);
+        }
+
+        .scarcity-box h3 {
+            color: var(--primary-dark);
+            margin-bottom: 0.8rem;
+        }
+
+        .spots-left {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            font-family: 'DM Sans', sans-serif;
+            margin: 16px 0;
+        }
+
+        .guarantee-box {
+            background: linear-gradient(135deg, rgba(127, 176, 105, 0.12) 0%, rgba(127, 176, 105, 0.06) 100%);
+            padding: 44px;
+            border-radius: 28px;
+            margin: 50px 0;
+            border: 2px solid var(--accent);
+        }
+
+        .guarantee-box h3 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-section {
+            margin: 60px 0;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 32px;
+            border-radius: 28px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(127, 176, 105, 0.12);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.03);
+        }
+
+        .faq-item h4 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.15rem;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+        }
+
+        .faq-item p {
+            margin-bottom: 0;
+        }
+
+        .timeline-box {
+            background: white;
+            padding: 44px;
+            border-radius: 28px;
+            margin: 50px 0;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+        }
+
+        .timeline-item {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+
+        .timeline-item strong {
+            color: var(--primary);
+            font-size: 1.15rem;
+        }
+
+        .options-grid {
+            display: grid;
+            gap: 28px;
+            margin: 50px 0;
+        }
+
+        .option-card {
+            background: white;
+            padding: 38px;
+            border-radius: 28px;
+            border: 2px solid rgba(140, 136, 132, 0.12);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        .option-card h4 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .option-card.recommended {
+            border: 3px solid var(--primary);
+            box-shadow: 0 20px 70px rgba(255, 128, 102, 0.2);
+        }
+
+        .personal-note {
+            background: linear-gradient(135deg, rgba(255, 128, 102, 0.08) 0%, rgba(127, 176, 105, 0.08) 100%);
+            padding: 52px;
+            border-radius: 32px;
+            margin: 60px 0;
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+
+        .signature {
+            font-style: normal;
+            margin-top: 32px;
+            font-weight: 600;
+        }
+
+        .final-cta-section {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-soft) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .final-cta-section h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .final-cta-section .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .final-cta-section .btn {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .final-cta-section .small-text {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 769px) {
+            .options-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .price-large {
+                font-size: 5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Sticky Banner -->
+<div class="email-banner">
+    <div class="email-banner-content">
+        <span>📧</span>
+        <span>Check your email! Your free guide is on its way (check spam if you don't see it in 2 minutes)</span>
+    </div>
+</div>
+
+<!-- Header Section -->
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="container" style="max-width: 800px; text-align: center;">
+        <h1>You're One Step Away From Launching Your App</h1>
+        <p class="lead">Join 24 other builders in the December cohort</p>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section style="background: var(--warm-white); padding: 60px 0;">
+    <div class="container" style="max-width: 800px;">
+
+        <h2>Here's What Most People Don't Tell You...</h2>
+
+        <p>The free guide you just got? It's powerful. You'll learn how to install Claude Code, understand the basics, and even build a simple counter app.</p>
+
+        <p>But here's the truth:</p>
+
+        <div class="warning-box">
+            <h3>The Free Guide Gets You 20% There</h3>
+            <p><strong>What's Missing:</strong></p>
+            <ul class="content-list">
+                <li>How do I add subscriptions so my app makes money?</li>
+                <li>How do I create a professional onboarding flow?</li>
+                <li>What do I do when Claude Code gives me an error I don't understand?</li>
+                <li>How do I submit to the App Store without getting rejected?</li>
+                <li>How do I design screens that look professional, not amateur?</li>
+                <li>Where do I even START with my actual app idea?</li>
+            </ul>
+            <p style="margin-top: 24px;"><strong>Most people get stuck at this point and give up.</strong></p>
+        </div>
+
+        <p>I know because I've built multiple revenue-generating apps, and I hit EVERY one of these walls. The difference? I had to figure it out alone, spending months debugging, getting rejected by Apple, and rebuilding things 3-4 times.</p>
+
+        <p><strong>You don't have to do that.</strong></p>
+
+        <div class="solution-box">
+            <h3>What If You Had Me In Your Corner?</h3>
+            <p><strong>Imagine having direct access to someone who's already:</strong></p>
+            <ul class="content-list">
+                <li>Built and launched multiple apps (that actually make money)</li>
+                <li>Gone from garden designer to app developer (if I can do it, you can too)</li>
+                <li>Figured out ALL the gotchas with App Store submission</li>
+                <li>Set up subscriptions and paywalls that convert</li>
+                <li>Used Claude Code to build real, production apps</li>
+            </ul>
+            <p style="margin-top: 24px;"><strong>That's what the December cohort gives you: me, guiding you every step of the way.</strong></p>
+        </div>
+
+        <h2 style="margin-top: 80px;">Here's Everything You Get:</h2>
+
+        <div class="included-box">
+            <h3>6 Weeks of Building Together</h3>
+            <ul class="included-list">
+                <li><strong>8 Complete Modules</strong> - From Apple Developer account setup to your app live in the store</li>
+                <li><strong>6 Weekly Live Q&A Calls</strong> - Ask me anything, show me your screen, get unstuck in real-time</li>
+                <li><strong>Private Community Access</strong> - You're not alone. Build alongside 24 other first-time app builders</li>
+                <li><strong>100+ Claude Code Prompts</strong> - Copy-paste prompts for every feature (onboarding, paywalls, navigation, etc.)</li>
+                <li><strong>Revenue Cat & Superwall Setup</strong> - Step-by-step monetization (this alone is worth hundreds)</li>
+                <li><strong>App Store Submission Templates</strong> - Descriptions, keywords, screenshots - don't guess, use what works</li>
+                <li><strong>1-on-1 Code Reviews</strong> - I'll personally review your app and give feedback</li>
+                <li><strong>Lifetime Access</strong> - Keep all materials forever, join future cohorts free</li>
+            </ul>
+        </div>
+
+        <h3 style="text-align: center; margin: 60px 0 30px;">But The Real Value? You're Not Alone.</h3>
+
+        <p>When you get an error at 11pm and can't figure it out? Post in the community, get help within hours.</p>
+
+        <p>When you're not sure if your app idea is too complex? Ask me on the weekly call.</p>
+
+        <p>When you're stuck on App Store Connect and Google isn't helping? I've been there, I'll walk you through it.</p>
+
+        <p><strong>This is the difference between finishing and giving up.</strong></p>
+
+        <div class="testimonial-large">
+            <p>"I tried following YouTube tutorials for 3 months and got nowhere. In the cohort, I had a working app on my phone in Week 2. Having Katie available to answer questions changed everything."</p>
+            <p>— Sarah M., Cohort 1</p>
+        </div>
+
+        <div class="price-box" id="buy">
+            <p class="price-strikethrough">Regular Price: $597</p>
+            <div class="price-large">$397</div>
+            <p class="price-payment-plan">or 3 payments of $149</p>
+            <a href="#buy" class="btn btn-primary btn-large">Join December Cohort</a>
+            <p class="price-details">Cohort starts December 9th, 2024 | 6 weeks | Live calls + community</p>
+        </div>
+
+        <div class="scarcity-box">
+            <h3>⚠️ Only 25 Spots Available</h3>
+            <div class="spots-left">17 spots left</div>
+            <p>I keep cohorts small so I can give everyone personal attention. When we're full, you'll have to wait until February.</p>
+        </div>
+
+        <div class="guarantee-box">
+            <h3>🛡️ 90-Day 'Launch or Refund' Guarantee</h3>
+            <p>Follow the program, submit your app within 90 days, or get 100% of your money back. No questions asked. I'm that confident you'll succeed.</p>
+        </div>
+
+        <h2 style="margin-top: 80px;">Questions?</h2>
+
+        <div class="faq-section">
+            <div class="faq-item">
+                <h4>Do I need coding experience?</h4>
+                <p>Nope! I was a garden designer. If you can follow instructions and Google things when you're stuck, you can do this. Claude Code writes the actual code.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Do I need a Mac?</h4>
+                <p>Yes. Apple requires macOS to build iOS apps. No way around it. (Sorry Windows users!)</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>How much time per week?</h4>
+                <p>Plan for 10-15 hours/week. Live calls are 90 minutes, the rest is building on your own time. Most people do evenings/weekends.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>What if I don't have an app idea?</h4>
+                <p>Module 3 walks you through ideation. We help you find something simple, buildable, and actually useful. Many students come in without an idea.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>What if I miss a live call?</h4>
+                <p>All calls are recorded. Watch at your own pace. But I highly recommend attending live - that's where the magic happens.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>What if I get stuck and can't figure something out?</h4>
+                <p>That's literally why you're paying me! Post in the community (response within hours), ask on weekly calls, or wait for my 1-on-1 code review. You won't be stuck for long.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Will my app actually make money?</h4>
+                <p>I teach you HOW to set up subscriptions and monetization. Whether your specific app makes $100 or $1000/month depends on your idea, execution, and marketing. But you'll have all the tools.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Is this just recorded videos?</h4>
+                <p>No! 6 live calls with me, active community, 1-on-1 reviews. The recordings are there for reference, but this is cohort-based for a reason - we build together.</p>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 80px;">Here's What Happens When You Join:</h2>
+
+        <div class="timeline-box">
+            <div class="timeline-item">
+                <p><strong>Today:</strong> You join, get instant access to Module 1, start setting up accounts</p>
+            </div>
+            <div class="timeline-item">
+                <p><strong>December 9:</strong> Cohort kicks off, first live call, meet your fellow builders</p>
+            </div>
+            <div class="timeline-item">
+                <p><strong>Week 2-5:</strong> Build your app, attend weekly calls, get unstuck, see progress</p>
+            </div>
+            <div class="timeline-item">
+                <p><strong>Week 6:</strong> Submit to App Store, final touches</p>
+            </div>
+            <div class="timeline-item">
+                <p><strong>January/February:</strong> Your app is LIVE and people are downloading it 🎉</p>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 80px;">Let's Be Real About Your Options:</h2>
+
+        <div class="options-grid">
+            <div class="option-card">
+                <h4>Option 1: Figure it out alone</h4>
+                <p><strong>Cost:</strong> Free (but 6-12 months of frustration)</p>
+                <p><strong>Success rate:</strong> ~10% actually launch</p>
+                <p>You'll get stuck, feel lost, probably give up</p>
+            </div>
+
+            <div class="option-card">
+                <h4>Option 2: Hire a developer</h4>
+                <p><strong>Cost:</strong> $5,000-$50,000</p>
+                <p><strong>Timeline:</strong> 3-6 months</p>
+                <p>You don't learn anything, can't make changes yourself</p>
+            </div>
+
+            <div class="option-card recommended">
+                <h4>Option 3: Join December Cohort</h4>
+                <p><strong>Cost:</strong> $397</p>
+                <p><strong>Timeline:</strong> 6 weeks to launch</p>
+                <p>You learn everything, build it yourself, have support</p>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 80px;">A Quick Note From Me:</h2>
+
+        <div class="personal-note">
+            <p>I'm not going to BS you - building an app takes work. There will be moments when you want to quit. An error you can't solve, a feature that seems impossible, Apple rejecting your first submission.</p>
+
+            <p>But here's the thing: Every person who's launched an app has been through those exact same moments. The only difference between them and people who gave up? They had help.</p>
+
+            <p>I want to be that help for you.</p>
+
+            <p>I went from not knowing what a variable was to having apps in the store making passive income. Not because I'm special, but because I had a system and I kept going.</p>
+
+            <p>This cohort is that system for you.</p>
+
+            <div class="signature">
+                <p>— Katie</p>
+                <p>Garden Designer → App Developer</p>
+                <p>Founder, App in 30 Days</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="final-cta-section">
+    <div class="container" style="max-width: 700px;">
+        <h2>Ready to Build Your App?</h2>
+        <p class="subtitle">Join 24 other builders in the December cohort</p>
+        <a href="#buy" class="btn btn-primary btn-large">Join for $397</a>
+        <p class="small-text">Starts December 9, 2024 | 25 spots only | 90-day guarantee</p>
+    </div>
+</section>
+
+<script>
+// Intercept all CTA button clicks
+document.querySelectorAll('a[href="#buy"]').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        // TODO: Replace with actual Stripe checkout URL
+        alert('Connect payment processor\n\nReplace this with:\nwindow.location.href = "https://buy.stripe.com/your-checkout-url";');
+
+        // When ready, use this:
+        // window.location.href = 'https://buy.stripe.com/your-checkout-url';
+    });
+});
+</script>
+
+</body>
+</html>
