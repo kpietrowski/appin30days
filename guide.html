@@ -13,21 +13,122 @@
             display: flex;
             align-items: center;
             padding: 60px 0 50px;
+            position: relative;
+            overflow: hidden;
         }
 
         .guide-hero h1 {
             font-size: 2rem;
             margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
         }
 
         .guide-hero .lead {
             font-size: 1.1rem;
             margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
         }
 
         .guide-container {
             max-width: 650px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Floating app icons decoration */
+        .floating-icons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .app-icon {
+            position: absolute;
+            border-radius: 22%;
+            opacity: 0.15;
+            animation: float ease-in-out infinite;
+        }
+
+        .app-icon-1 {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            top: 10%;
+            left: 5%;
+            animation-duration: 8s;
+            animation-delay: 0s;
+        }
+
+        .app-icon-2 {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            top: 25%;
+            right: 8%;
+            animation-duration: 10s;
+            animation-delay: 1s;
+        }
+
+        .app-icon-3 {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            bottom: 30%;
+            left: 10%;
+            animation-duration: 12s;
+            animation-delay: 2s;
+        }
+
+        .app-icon-4 {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            bottom: 15%;
+            right: 12%;
+            animation-duration: 9s;
+            animation-delay: 0.5s;
+        }
+
+        .app-icon-5 {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            top: 45%;
+            right: 5%;
+            animation-duration: 11s;
+            animation-delay: 1.5s;
+        }
+
+        .app-icon-6 {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #ffa08a 0%, #e85d3e 100%);
+            top: 60%;
+            left: 8%;
+            animation-duration: 13s;
+            animation-delay: 2.5s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            25% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+            50% {
+                transform: translateY(-10px) rotate(-5deg);
+            }
+            75% {
+                transform: translateY(-25px) rotate(3deg);
+            }
         }
 
         .benefits-box {
@@ -219,6 +320,15 @@
 <body>
 
 <section class="guide-hero hero">
+    <div class="floating-icons">
+        <div class="app-icon app-icon-1"></div>
+        <div class="app-icon app-icon-2"></div>
+        <div class="app-icon app-icon-3"></div>
+        <div class="app-icon app-icon-4"></div>
+        <div class="app-icon app-icon-5"></div>
+        <div class="app-icon app-icon-6"></div>
+    </div>
+
     <div class="container guide-container">
         <h1>Build Your First iOS App with AI (No Coding Required)</h1>
 
